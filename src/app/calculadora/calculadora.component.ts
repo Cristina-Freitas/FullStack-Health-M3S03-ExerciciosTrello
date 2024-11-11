@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './calculadora.component.css'
 })
 export class CalculadoraComponent {
+
   num1: number = 0;
   num2: number = 0;
   result: number = 0;
@@ -20,7 +21,15 @@ export class CalculadoraComponent {
     this.result = this.calculatorService.somar(this.num1, this.num2);
   }
 
+  subtrairValor() {
+    this.result = this.calculatorService.subtrair(this.num1, this.num2);
+    }
+
   dividirValor(){
     this.result = this.calculatorService.dividir(this.num1, this.num2);
   }
+
+  multiplicarValor() {
+    this.result = this.calculatorService.multiplicar(this.num1, this.num2);
+    }
 }
