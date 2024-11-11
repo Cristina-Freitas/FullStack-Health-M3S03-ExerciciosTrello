@@ -75,7 +75,11 @@ describe('CalculadoraService', () => {
     expect(spy).toHaveBeenCalledWith(4,2);
   });
 
-
+  // Novo teste para a função `subtrair`
+  it('deve subtrair dois números corretamente', () => {
+    const result = service.subtrair(10, 3);
+    expect(result).toBe(7); // Verifica se o resultado é 7
+  });
 
   
 });
