@@ -102,5 +102,28 @@ describe('CalculadoraComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
+    // Novo teste para verificar o funcionamento do ngModel
+    it('deve atualizar as variáveis num1 e num2 com o ngModel', () => {
+      const compiled = fixture.nativeElement as HTMLElement;
+  
+      // Seleciona os campos de entrada pelo atributo placeholder
+      const inputNum1 = compiled.querySelector('input[placeholder="Número 1"]') as HTMLInputElement;
+      const inputNum2 = compiled.querySelector('input[placeholder="Número 2"]') as HTMLInputElement;
+  
+      // Define valores nos campos de entrada e dispara o evento de input
+      inputNum1.value = '5';
+      inputNum1.dispatchEvent(new Event('input'));
+  
+      inputNum2.value = '10';
+      inputNum2.dispatchEvent(new Event('input'));
+  
+      // Atualiza a detecção de mudanças
+      fixture.detectChanges();
+  
+      // Verifica se os valores das variáveis foram atualizados
+      expect(component.num1).toBe(5);
+      expect(component.num2).toBe(10);
+    });
+  
 
 });
