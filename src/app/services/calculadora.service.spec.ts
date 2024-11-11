@@ -87,5 +87,11 @@ describe('CalculadoraService', () => {
     expect(result).toBe(15); // Verifica se o resultado é 15
   });
 
+  // Novo teste para a função `dividir`
+  it('deve dividir dois números corretamente', () => {
+    const result = service.dividir(10, 2);
+    expect(result).toBe(5); // Verifica se o resultado é 5
+  });
+
   
 });
