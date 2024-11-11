@@ -81,5 +81,11 @@ describe('CalculadoraService', () => {
     expect(result).toBe(7); // Verifica se o resultado é 7
   });
 
+   // Novo teste para a função `multiplicar`
+   it('deve multiplicar dois números corretamente', () => {
+    const result = service.multiplicar(3, 5);
+    expect(result).toBe(15); // Verifica se o resultado é 15
+  });
+
   
 });
